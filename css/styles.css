@@ -39,7 +39,7 @@ html, body {
   height: 100%;
   z-index: -1;
   /* Replace with your actual background image path */
-  background: url('../images/5.jpg') center center no-repeat;
+  background: url('../images/6.jpg') center center no-repeat;
   background-size: cover;
 }
 
@@ -202,17 +202,22 @@ html, body {
 #slide3 p{
   font-family: 'Luxurious Roman';
   line-height: 1.75rem;
-  font-size: 1.25rem; /* Adjust as needed */
+  font-size: 1.25rem; 
 }
 #slide4 span {
   font-family: 'Luxurious Roman';
   line-height: 1.75rem;
-  font-size: 1.25rem; /* Adjust as needed */
+  font-size: 1rem;
 }
-#slide3 p{
+#slide4 h1{
+  font-family: 'Luxurious Roman';
+}
+#slide4 strong{
   font-family: 'Luxurious Roman';
   line-height: 1.75rem;
-  font-size: 1.25rem; /* Adjust as needed */
+  font-size: 1.75rem; 
+  margin-top: 20px;
+
 }
 
 /* Ceremony Title */

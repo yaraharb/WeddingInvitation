@@ -46,20 +46,33 @@ startBtn.addEventListener('click', () => {
     icon.classList.add('fa-bars');
   });
   
-  // Music Toggle: Play/pause background music
+document.addEventListener('DOMContentLoaded', () => {
   const musicToggle = document.getElementById('music-toggle');
-  const audio = new Audio('path/to/your/music.mp3'); // Replace with correct file path
+  const audio = new Audio('../music/all of me.mp3'); // Ensure the path is correct
   let isPlaying = false;
 
+  // Try to auto-play the music on page load
+  audio.play().then(() => {
+    isPlaying = true;
+  }).catch((error) => {
+    console.log('Autoplay was prevented. Music will start when the user clicks.', error);
+  });
+
+  // Toggle play/pause on click
   musicToggle.addEventListener('click', () => {
-    if (!isPlaying) {
-      audio.play();
-      isPlaying = true;
-    } else {
+    if (isPlaying) {
       audio.pause();
       isPlaying = false;
+
+    } else {
+      audio.play().then(() => {
+        isPlaying = true;
+      }).catch((error) => {
+        console.log('Playback failed:', error);
+      });
     }
   });
+});
 
 
 
@@ -166,4 +179,4 @@ startBtn.addEventListener('click', () => {
       // Optionally, send data to the server or reset the form
     });
   });
-  
+  // Get the elements
