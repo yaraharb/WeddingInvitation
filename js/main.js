@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', () => {
+  emailjs.init('trm32B0ebXh0zgIfZ'); // Replace with your actual User ID
+});
+
 // Initialize Swiper for horizontal slide transitions
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
@@ -180,3 +184,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   // Get the elements
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize EmailJS with your public key
+    emailjs.init("YOUR_PUBLIC_KEY_HERE"); 
+  
+    // Reference the RSVP form element
+    const rsvpForm = document.getElementById('rsvp-form');
+  
+    rsvpForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+  
+      // Determine which attendance option is selected
+      const attendance = document.querySelector('input[name="attendance"]:checked').value;
+      
+      // Build an object to send via EmailJS
+      const formData = {
+        attendance: attendance
+      };
+  
+      if (attendance === "Attending") {
+        // For Attending: collect number of guests and their names
+        formData.numberOfGuests = document.getElementById('guests').value;
+  
+        // Gather guest names from dynamic fields (if added)
+        let guestNames = "";
+        const guestInputs = document.querySelectorAll("#guests-fields input");
+        guestInputs.forEach((input, index) => {
+           guestNames += `Guest #${index + 1}: ${input.value}\n`;
+        });
+        formData.guestNames = guestNames;
+      } else {
+        // For Not Attending: collect the sender's name
+        formData.name = document.getElementById('notAttendingName').value;
+      }
+  
+      // Send the form data using EmailJS
+      emailjs.send("service_71ye3ac", "template_n2gtndv", formData)
+        .then((response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Thank you for your RSVP!");
+          rsvpForm.reset(); // Optionally reset the form after submission
+        })
+        .catch((error) => {
+          console.error("FAILED...", error);
+          alert("There was an error sending your RSVP. Please try again.");
+        });
+    });
+  });
+  
