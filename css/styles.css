@@ -184,7 +184,6 @@ html, body {
 }
 #startText {
   font-family: "Luxurious Roman";
-  
 }
 #slide2 span {
   font-family: 'High Spirited';
@@ -217,7 +216,6 @@ html, body {
   line-height: 1.75rem;
   font-size: 1.75rem; 
   margin-top: 20px;
-
 }
 
 /* Ceremony Title */
@@ -343,13 +341,12 @@ form select {
   width: 220px;
   font-size: 1rem;
 }
-.gy
 /* RSVP Button */
 .rsvp-button {
   margin-top: 1rem;
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: transparent;
+  background-color: #48484880;
   color: #fff;
   border: 2px solid #fff;
   border-radius: 8px;
