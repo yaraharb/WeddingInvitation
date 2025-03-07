@@ -39,7 +39,7 @@ html, body {
   height: 100%;
   z-index: -1;
   /* Replace with your actual background image path */
-  background: url('../images/polariod2.png') center center no-repeat;
+  background: url('../images/5.jpg') center center no-repeat;
   background-size: cover;
 }
 
@@ -315,7 +315,7 @@ form select {
   border: 2px solid #fff;         /* A white border to match your design */
   border-radius: 4px;            /* Slightly rounded corners */
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 1rem; 
 }
 /* Form Groups for label & input */
 .form-group {
