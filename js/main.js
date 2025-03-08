@@ -173,10 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
         errorMessage.style.color = 'red';
         return;
       }
-  
-      // If validation passes, proceed with submission logic
-      alert('Thank you for your RSVP!');
-      // Optionally, send data to the server or reset the form
     });
   });
   // Get the elements
