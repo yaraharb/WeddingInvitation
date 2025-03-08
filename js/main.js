@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  emailjs.init('trm32B0ebXh0zgIfZ'); // Replace with your actual User ID
-});
-
 // Initialize Swiper for horizontal slide transitions
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
@@ -186,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Get the elements
   document.addEventListener('DOMContentLoaded', () => {
     // Initialize EmailJS with your public key
-    emailjs.init("YOUR_PUBLIC_KEY_HERE"); 
+      emailjs.init("trm32B0ebXh0zgIfZ");
   
     // Reference the RSVP form element
     const rsvpForm = document.getElementById('rsvp-form');
@@ -204,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       if (attendance === "Attending") {
         // For Attending: collect number of guests and their names
-        formData.numberOfGuests = document.getElementById('guests').value;
+        formData.guests = document.getElementById('guests').value;
   
         // Gather guest names from dynamic fields (if added)
         let guestNames = "";
@@ -215,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.guestNames = guestNames;
       } else {
         // For Not Attending: collect the sender's name
-        formData.name = document.getElementById('notAttendingName').value;
+        formData.Name = document.getElementById('notAttendingName').value;
       }
   
       // Send the form data using EmailJS
