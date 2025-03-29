@@ -33,7 +33,7 @@ html, body {
   height: 100%;
   z-index: -1;
   /* Replace with your actual background image path */
-  background: url('../images/new4.jpg') center center no-repeat;
+  background: url('../images/new6.jpg') center center no-repeat;
   background-size: cover;
 }
 
@@ -162,11 +162,12 @@ html, body {
 #slide2 span {
   font-family: 'High Spirited';
   font-size: 4em;
+  
 }
 #slide2 p {
   font-family: 'Luxurious Roman';
   font-size: 1.25rem;
-  line-height: 1.75rem;
+  line-height: 2.25rem;
 }
 #slide3 span {
   font-family: 'High Spirited';
