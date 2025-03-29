@@ -254,7 +254,7 @@ html, body {
   margin-bottom: 1.5rem;
 }
 
-.rsvp-slide, .slide-content, #slide5 {
+#slide5 {
   display: flex;
   flex-direction: column;
   align-items: center;

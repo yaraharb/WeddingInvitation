@@ -11,26 +11,23 @@ startBtn.addEventListener('click', () => {
   }, 500);
   audio.play();
 });
-const menuToggle = document.getElementById('menu-toggle');
-const sideMenu = document.getElementById('side-menu');
-const closeMenu = document.querySelector('#side-menu .close-menu');
-  menuToggle.addEventListener('click', () => {
-    sideMenu.classList.toggle('open');
-    const icon = menuToggle.querySelector('i');
-    if (sideMenu.classList.contains('open')) {
-      icon.classList.remove('fa-bars');
-      icon.classList.add('fa-times');
-    } else {
-      icon.classList.remove('fa-times');
-      icon.classList.add('fa-bars');
-    }
+  const menu = document.getElementById('side-menu');
+  const toggle = document.getElementById('menu-toggle');
+  const closeBtn = document.querySelector('#side-menu .close-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.add('open');
   });
 
-  closeMenu.addEventListener('click', () => {
-    sideMenu.classList.remove('open');
-    const icon = menuToggle.querySelector('i');
-    icon.classList.remove('fa-times');
-    icon.classList.add('fa-bars');
+  closeBtn.addEventListener('click', () => {
+    menu.classList.remove('open');
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('#side-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+    });
   });
 document.addEventListener('DOMContentLoaded', () => {
   const musicToggle = document.getElementById('music-toggle');
