@@ -1,54 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
   <meta charset="UTF-8" />
-  <title>Wedding Story</title>
-  <!-- Tell browsers to use the device's width -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <title>Wedding Invitation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-  <!-- Link to your CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Swiper CSS for slide transitions -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-  />
-  <link
-  href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-  rel="stylesheet"
-/>
-
-  <!-- Font Awesome for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 </head>
 <body>
-  <!-- Optional fixed background (it fills the viewport) -->
   <div id="fixed-bg"></div>
 
-  <!-- Music Toggle Icon (top-right) -->
   <div id="music-toggle">
     <i class="fa fa-music"></i>
   </div>
+  <audio id="bg-music" src="music/all-of-me.mp3" loop muted></audio>
 
-  <!-- Hamburger Menu Icon (top-left) -->
   <div id="menu-toggle">
     <i class="fa fa-bars"></i>
   </div>
 
-  <!-- Side Menu -->
   <nav id="side-menu">
     <div class="close-menu">
       <i class="fa fa-times"></i>
@@ -61,15 +35,11 @@
       <li><a href="#slide5">RSVP</a></li>
     </ul>
   </nav>
-  
-  <!-- Swiper Container for slides -->
+
   <div class="swiper">
     <div class="swiper-wrapper">
-
-      <!-- Slide 1: Landing Page -->
       <div class="swiper-slide" id="slide1">
         <div class="slide-content">
-          <!-- Circular “Start” Button -->
           <div id="start-btn">
             <h2>Start</h2>
           </div>
@@ -80,16 +50,16 @@
       </div>
       <div class="swiper-slide" id="slide2">
         <div class="slide-content">
-          <span>Mohamad </span>
+          <span>Mohamad Amin Harb </span>
           <span>&amp;</span>
-          <span>Farah</span>
+          <span>Farah Mustafa Al Yafi</span>
           <p>Are Getting Married</p>
         </div>
       </div>
 
       <div class="swiper-slide" id="slide3">
         <div class="slide-content">
-          <p>With joyous hearts, </p> 
+          <p>With joyous hearts, </p>
           <span>Harb &amp; Yafi Families</span>
           <p>invites you to celebrate the wedding of</p>
           <span>Mohamad &amp; Farah</span>
@@ -99,40 +69,32 @@
 
       <div class="swiper-slide" id="slideX">
         <div class="slide-content ceremony-slide">
-          <!-- Title -->
           <h2 class="ceremony-title">Ceremony</h2>
-      
-          <!-- Calendar Icon + Date & Time -->
           <div class="ceremony-detail-block">
             <i class="fa fa-calendar"></i>
             <p>July 27, 2025<br>6:00 pm</p>
           </div>
-      
-          <!-- Location Icon + Location Name(s) -->
+
           <div class="ceremony-detail-block">
             <i class="fa fa-map-marker-alt"></i>
             <strong>Heaven<br>Chouf</strong>
           </div>
-      
-          <!-- Location Map Button -->
           <button id="map-btn">Location Map</button>
         </div>
       </div>
-      <!-- Slide 3: Gift Registry -->
       <div class="swiper-slide" id="slide4">
         <div class="slide-content">
           <h1>Gift Registry</h1>
           <span>Your love, laughter, and company on our wedding day are the greates gifts of all. However, if you would like to contribute to our new journey, a wedding list is available at</span>
           <strong>OMT # 71310584</strong>
         </div>
-      </div><!-- Slide 4: RSVP -->
+      </div>
       <div class="swiper-slide" id="slide5">
         <div class="slide-content rsvp-slide">
           <h2 class="rsvp-title">Be Our Guest</h2>
           <p class="rsvp-subtitle">Kindly RSVP by May 31, 2024</p>
       
           <form id="rsvp-form">
-            <!-- Attending / Not Attending Options -->
             <div class="attendance-options">
               <label class="attendance-option">
                 <input type="radio" name="attendance" value="Attending" checked />
@@ -153,14 +115,13 @@
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
+                  <option value="6">6</option>
                 </select>
               </div>
-      
-              <!-- Dynamic Guest Fields Will Be Inserted Here -->
+
               <div id="guests-fields"></div>
             </div>
-      
-            <!-- Not Attending Block (hidden by default) -->
+
             <div id="not-attending-block" style="display: none;">
               <div class="form-group">
                 <label for="notAttendingName">Your Name</label>
@@ -168,25 +129,18 @@
               </div>
             </div>
             <div id="error-message" class="error-message" style="display: none;"></div>
-            <!-- Submit Button -->
             <button type="submit" class="rsvp-button">RSVP</button>
           </form>
         </div>
       </div>
-      
-</div>
-
-
-
     </div>
   </div>
+</div>
   <div class="swipe-left">
     <span>Swipe Left</span>
     <i class="fa fa-arrow-left"></i>
   </div>
-  <!-- Swiper JS for slide functionality -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <!-- Your custom JS must come after Swiper -->
   <script src="js/main.js"></script>
 </body>
 </html>

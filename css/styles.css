@@ -1,18 +1,16 @@
-/* =======================
-   RESET & BASE STYLES
-   ======================= */
-  @font-face {
-    font-family: 'High Spirited';
-    src: url('../Fonts/High Spirited.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Luxurious Roman';
-    src: url('../Fonts/LuxuriousRoman-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+
+@font-face {
+  font-family: 'High Spirited';
+  src: url('../Fonts/High Spirited.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Luxurious Roman';
+  src: url('../Fonts/LuxuriousRoman-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -23,14 +21,10 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: Arial, sans-serif;
-  /* Allow vertical scrolling if needed */
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-/* =======================
-   FIXED BACKGROUND
-   ======================= */
 #fixed-bg {
   position: fixed;
   top: 0;
@@ -39,16 +33,13 @@ html, body {
   height: 100%;
   z-index: -1;
   /* Replace with your actual background image path */
-  background: url('../images/6.jpg') center center no-repeat;
+  background: url('../images/new2.jpg') center center no-repeat;
   background-size: cover;
 }
 
-/* =======================
-   SWIPER CONTAINER & SLIDES
-   ======================= */
 .swiper {
   width: 100%;
-  height: 100vh;  /* Each slide fills the viewport height */
+  height: 100vh;
 }
 
 .swiper-slide {
@@ -59,25 +50,19 @@ html, body {
   background: transparent;
 }
 
-/* =======================
-   SLIDE CONTENT
-   ======================= */
-   .slide-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;    /* Ensure it takes the full height of the slide */
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  
-/* =======================
-   CIRCULAR "START" BUTTON
-   ======================= */
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+}
 #start-btn {
   width: 7rem;
   height: 7rem;
@@ -101,11 +86,7 @@ html, body {
   font-size: 0.9rem;
 }
 
-/* =======================
-   MUSIC & MENU ICONS
-   ======================= */
-#music-toggle,
-#menu-toggle {
+#music-toggle, #menu-toggle {
   position: fixed;
   top: 20px;
   font-size: 1.5rem;
@@ -122,13 +103,10 @@ html, body {
   left: 20px;
 }
 
-/* =======================
-   SIDE MENU
-   ======================= */
 #side-menu {
   position: fixed;
   top: 0;
-  left: -200px;  /* Hidden by default */
+  left: -200px;
   width: 200px;
   height: 100%;
   background: #222;
@@ -164,21 +142,17 @@ html, body {
   left: 0;
 }
 
-/* =======================
-   OPTIONAL MAP BUTTON
-   ======================= */
-   #map-btn {
-    background-color: transparent; /* see-through background */
-    color: #fff;                   /* white text */
-    border: 2px solid #fff;       /* white border */
-    padding: 10px 20px;           /* adjust spacing as needed */
-    border-radius: 8px;           /* slightly rounded corners */
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 1rem;             /* spacing above the button */
-    transition: all 0.3s ease;    /* smooth hover transition */
-  }
-/* Target Slide 1 heading & text */
+#map-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
 #slide1 h2{
   font-family: "Luxurious Roman";
 }
@@ -187,21 +161,21 @@ html, body {
 }
 #slide2 span {
   font-family: 'High Spirited';
-  font-size: 4em; /* Adjust as needed */
+  font-size: 4em;
 }
 #slide2 p {
   font-family: 'Luxurious Roman';
-  font-size: 1.25rem; /* Adjust as needed */
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 #slide3 span {
   font-family: 'High Spirited';
-  font-size: 2em; /* Adjust as needed */
+  font-size: 2em;
 }
 #slide3 p{
   font-family: 'Luxurious Roman';
   line-height: 1.75rem;
-  font-size: 1.25rem; 
+  font-size: 1.25rem;
 }
 #slide4 span {
   font-family: 'Luxurious Roman';
@@ -218,55 +192,50 @@ html, body {
   margin-top: 20px;
 }
 
-/* Ceremony Title */
 .ceremony-title {
   font-size: 2rem;
-  font-family: 'Luxurious Roman';       /* Larger heading */
-  margin-bottom: 1.5rem;  /* Spacing below heading */
+  font-family: 'Luxurious Roman';
+  margin-bottom: 1.5rem;
 }
 
-/* Container for each icon + text block */
 .ceremony-detail-block {
   display: flex;
-  flex-direction: column; /* Icon above text */
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem;    /* Spacing between blocks */
+  margin-bottom: 1rem;
 }
 .ceremony-detail-block strong,p{
   font-family: 'Luxurious Roman';
   font-size: 1.25rem;
 }
 
-/* Icons: make them bigger, add margin below */
 .ceremony-detail-block i {
-  font-size: 2.5rem;        /* Increase icon size */
-  margin-bottom: 0.5rem;  /* Space between icon and text */
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Date, time, location text */
 .ceremony-detail-block p {
   font-size: 1.2rem;
-  line-height: 1.4;       /* Slightly looser line spacing */
-  margin: 0;              /* Remove default paragraph margin */
+  line-height: 1.4;
+  margin: 0;
 }
 .swipe-left {
   position: absolute;
-  bottom: 20px;               /* Adjust spacing from bottom */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  font-size: 1.2rem;          /* Adjust size as needed */
+  font-size: 1.2rem;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   display: flex;
-  flex-direction: column;     /* Stack text above arrow */
+  flex-direction: column;
   align-items: center;
 }
 
 .swipe-left i {
-  margin-top: 5px;           /* Spacing between text and arrow */
+  margin-top: 5px;
 }
 
-/* RSVP Title & Subtitle */
 .rsvp-title {
   font-size: 2rem;
   font-family: "Luxurious Roman";
@@ -275,10 +244,9 @@ html, body {
 .rsvp-subtitle {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  font-style: italic; /* optional */
+  font-style: italic;
 }
 
-/* Attendance Toggle Buttons (Attending / Not Attending) */
 .attendance-options {
   display: flex;
   justify-content: center;
@@ -290,7 +258,6 @@ html, body {
   display: flex;
   align-items: center;
 }
-/* Hide the actual radio input */
 .attendance-option input[type="radio"] {
   position: absolute;
   opacity: 0;
@@ -301,32 +268,30 @@ html, body {
   border: 2px solid #ccc;
   border-radius: 8px;
   transition: 0.3s;
-  color: #fff;          
+  color: #fff;
   font-size: 1rem;
   background-color: #48484880;
 
 }
 /* Highlight the chosen option */
 .attendance-option input[type="radio"]:checked + span {
-  border-color: #00a650; 
-  background-color: #00a650; 
+  border-color: #4c6502;
+  background-color: #52ab00;
   color: #fff;
 }
 form select {
   background-color: #48484880;
-  color: #fff;                    /* White text (or any color you prefer) */
-  border: 2px solid #fff;         /* A white border to match your design */
-  border-radius: 4px;            /* Slightly rounded corners */
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
   padding: 0.5rem;
   font-size: 1rem; 
 }
-/* Form Groups for label & input */
 .form-group {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
-  
 }
 .form-group label {
   margin-bottom: 0.5rem;
@@ -341,7 +306,6 @@ form select {
   width: 220px;
   font-size: 1rem;
 }
-/* RSVP Button */
 .rsvp-button {
   margin-top: 1rem;
   padding: 10px 20px;
@@ -353,15 +317,12 @@ form select {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
-/* Error message styling */
 .error-message {
   margin-bottom: 1rem;
   font-size: 1rem;
   color: red;
   text-align: center;
 }
-
 .form-group label{
   font-family: 'Luxurious Roman';
 }
