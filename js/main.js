@@ -29,23 +29,23 @@ startBtn.addEventListener('click', () => {
       menu.classList.remove('open');
     });
   });
-document.addEventListener('DOMContentLoaded', () => {
-  const musicToggle = document.getElementById('music-toggle');
-  let isPlaying = false;
- musicToggle.addEventListener('click', () => {
-    if (isPlaying) {
-      audio.pause();
-      isPlaying = false;
+// document.addEventListener('DOMContentLoaded', () => {
+//   const musicToggle = document.getElementById('music-toggle');
+//   let isPlaying = false;
+//  musicToggle.addEventListener('click', () => {
+//     if (isPlaying) {
+//       audio.pause();
+//       isPlaying = false;
 
-    } else {
-      audio.play().then(() => {
-        isPlaying = true;
-      }).catch((error) => {
-        console.log('Playback failed:', error);
-      });
-    }
-  });
-});
+//     } else {
+//       audio.play().then(() => {
+//         isPlaying = true;
+//       }).catch((error) => {
+//         console.log('Playback failed:', error);
+//       });
+//     }
+//   });
+// });
   const mapBtn = document.getElementById('map-btn');
   mapBtn.addEventListener('click', () => {
     window.open('https://www.google.com/maps/place/33.623034,35.472572/data=!4m6!3m5!1s0!7e2!8m2!3d33.6230338!4d35.472572?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjEyNi4xMTAYACDXggMqUSw5NDIyMjM1Myw5NDIxNjQxMyw5NDIxMjQ5Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIxNzUyMyw5NDIxODY1Myw0NzA4NzExOCw0NzA4NDM5M0ICTEI%3D',
