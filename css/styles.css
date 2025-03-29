@@ -253,6 +253,16 @@ html, body {
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
+
+.rsvp-slide, .slide-content, #slide5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* important: don't center vertically */
+  height: auto; /* allow height to grow */
+  overflow-y: auto; /* allows scrolling if it gets too tall */
+  padding-bottom: 50px; /* so button doesn't hug the bottom */
+}
 .attendance-option {
   position: relative;
   display: flex;
@@ -275,9 +285,10 @@ html, body {
 }
 /* Highlight the chosen option */
 .attendance-option input[type="radio"]:checked + span {
-  border-color: #4c6502;
-  background-color: #52ab00;
+  border-color: #344403;
+  background-color: rgba(82, 171, 0, 0.5);
   color: #fff;
+  
 }
 form select {
   background-color: #48484880;

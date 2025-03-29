@@ -2,13 +2,14 @@ const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: false,
   });
-
+const audio = new Audio('../music/all of me.mp3');
 const startBtn = document.getElementById('start-btn');
 startBtn.addEventListener('click', () => {
   swiper.slideTo(1, 500);
   setTimeout(() => {
     swiper.removeSlide(0);
   }, 500);
+  audio.play();
 });
 const menuToggle = document.getElementById('menu-toggle');
 const sideMenu = document.getElementById('side-menu');
@@ -33,14 +34,7 @@ const closeMenu = document.querySelector('#side-menu .close-menu');
   });
 document.addEventListener('DOMContentLoaded', () => {
   const musicToggle = document.getElementById('music-toggle');
-  const audio = new Audio('../music/all of me.mp3');
   let isPlaying = false;
-
-  audio.play().then(() => {
-    isPlaying = true;
-  }).catch((error) => {
-    console.log('Autoplay was prevented. Music will start when the user clicks.', error);
-  });
  musicToggle.addEventListener('click', () => {
     if (isPlaying) {
       audio.pause();
