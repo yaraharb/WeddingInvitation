@@ -2,7 +2,7 @@ const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: false,
   });
-const audio = new Audio('../music/all of me.mp3');
+const audio = document.getElementById('bg-music');
 const startBtn = document.getElementById('start-btn');
 startBtn.addEventListener('click', () => {
   swiper.slideTo(1, 500);
