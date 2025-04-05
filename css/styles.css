@@ -153,40 +153,40 @@ html, body {
   margin-top: 1rem;
   transition: all 0.3s ease;
 }
-#slide1 h2{
+#StartSlide h2{
   font-family: "Luxurious Roman";
 }
 #startText {
   font-family: "Luxurious Roman";
 }
-#slide2 span {
+#Home span {
   font-family: 'High Spirited';
   font-size: 4em;
   
 }
-#slide2 p {
+#Home p {
   font-family: 'Luxurious Roman';
   font-size: 1.25rem;
   line-height: 2.25rem;
 }
-#slide3 span {
+#Invitation span {
   font-family: 'High Spirited';
   font-size: 2em;
 }
-#slide3 p{
+#Invitation p{
   font-family: 'Luxurious Roman';
   line-height: 1.75rem;
   font-size: 1.25rem;
 }
-#slide4 span {
+#GiftRegistry span {
   font-family: 'Luxurious Roman';
   line-height: 1.75rem;
   font-size: 1rem;
 }
-#slide4 h1{
+#GiftRegistry h1{
   font-family: 'Luxurious Roman';
 }
-#slide4 strong{
+#GiftRegistry strong{
   font-family: 'Luxurious Roman';
   line-height: 1.75rem;
   font-size: 1.25rem; 
@@ -255,7 +255,7 @@ html, body {
   margin-bottom: 1.5rem;
 }
 
-#slide5 {
+#RSVP {
   display: flex;
   flex-direction: column;
   align-items: center;
