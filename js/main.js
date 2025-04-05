@@ -191,11 +191,11 @@ document.addEventListener('DOMContentLoaded', () => {
       // ✅ All checks passed, send email
       emailjs.send("service_71ye3ac", "template_n2gtndv", formData)
         .then(() => {
-          alert("Thank you for your RSVP!");
+          alert("Thank you for your reservation!");
           rsvpForm.reset();
         })
         .catch(() => {
-          alert("There was an error sending your RSVP. Please try again.");
+          alert("There was an error sending your reservation. Please try again.");
         });
     });
   });
