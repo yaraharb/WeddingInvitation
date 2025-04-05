@@ -130,35 +130,74 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.addEventListener('DOMContentLoaded', () => {
-      emailjs.init("trm32B0ebXh0zgIfZ");
-
+    emailjs.init("trm32B0ebXh0zgIfZ");
+  
     const rsvpForm = document.getElementById('rsvp-form');
+    const errorMessage = document.getElementById('error-message');
+  
     rsvpForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const attendance = document.querySelector('input[name="attendance"]:checked').value;
-      const formData = {
-        attendance: attendance
-      };
-      if (attendance === "Attending") {
-        formData.guests = document.getElementById('guests').value;
-        let guestNames = "";
-        const guestInputs = document.querySelectorAll("#guests-fields input");
-        guestInputs.forEach((input, index) => {
-           guestNames += `Guest #${index + 1}: ${input.value}\n`;
-        });
-        formData.guestNames = guestNames;
-      } else {
-        formData.Name = document.getElementById('notAttendingName').value;
+  
+      errorMessage.style.display = 'none';
+  
+      const attendanceRadio = document.querySelector('input[name="attendance"]:checked');
+      if (!attendanceRadio) {
+        alert("Please select if you're attending or not.");
+        return;
       }
+  
+      const attendance = attendanceRadio.value;
+      const formData = { attendance };
+  
+      if (attendance === "Attending") {
+        const guestsInput = document.getElementById('guests');
+        const guestsVal = guestsInput?.value.trim();
+  
+        if (!guestsVal || isNaN(guestsVal) || parseInt(guestsVal) < 1) {
+          alert("Please select a valid number of guests.");
+          return;
+        }
+  
+        const guestInputs = document.querySelectorAll("#guests-fields input");
+        let guestNames = "";
+        let allGuestsFilled = true;
+  
+        guestInputs.forEach((input, index) => {
+          const name = input.value.trim();
+          if (!name) {
+            allGuestsFilled = false;
+          } else {
+            guestNames += `Guest #${index + 1}: ${name}\n`;
+          }
+        });
+  
+        if (!allGuestsFilled) {
+          alert("Please fill name");
+          return;
+        }
+  
+        formData.guests = guestsVal;
+        formData.guestNames = guestNames;
+  
+      } else if (attendance === "Not Attending") {
+        const name = document.getElementById('notAttendingName')?.value.trim();
+        if (!name) {
+          alert("Please fill name");
+          return;
+        }
+        formData.Name = name;
+      }
+  
+      // ✅ All checks passed, send email
       emailjs.send("service_71ye3ac", "template_n2gtndv", formData)
-        .then((response) => {
-          console.log("SUCCESS!", response.status, response.text);
+        .then(() => {
           alert("Thank you for your RSVP!");
           rsvpForm.reset();
         })
-        .catch((error) => {
-          console.error("FAILED...", error);
+        .catch(() => {
           alert("There was an error sending your RSVP. Please try again.");
         });
     });
   });
+  
+  

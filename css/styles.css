@@ -259,7 +259,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* important: don't center vertically */
+  /* justify-content: flex-start; important: don't center vertically */
   height: auto; /* allow height to grow */
   overflow-y: auto; /* allows scrolling if it gets too tall */
   padding-bottom: 50px; /* so button doesn't hug the bottom */
