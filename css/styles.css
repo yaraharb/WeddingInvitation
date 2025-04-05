@@ -33,7 +33,7 @@ html, body {
   height: 100%;
   z-index: -1;
   /* Replace with your actual background image path */
-  background: url('../images/new6.jpg') center center no-repeat;
+  background: url('../images/coverPic1.jpg') center center no-repeat;
   background-size: cover;
 }
 
